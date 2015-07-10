@@ -2,7 +2,7 @@
  * 
  * @author Cecil Worsley <cecil@looker.com>
  */
-package com.looker.dispatcher;
+package com.github.cworsley4.dispatcher;
 
 import java.util.ArrayList;
 import java.util.Map;
