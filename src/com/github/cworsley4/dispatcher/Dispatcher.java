@@ -1,6 +1,9 @@
 /**
+ * This class stores event subscribers, and has a broadcasting ability
+ * that will instantiate runnable interfaces in new threads for processing.
  * 
  * @author Cecil Worsley <cecil@looker.com>
+ * @since 2015/07/02
  */
 package com.github.cworsley4.dispatcher;
 
@@ -33,8 +36,8 @@ public class Dispatcher {
                 aev.setData(data);
                 (new Thread(aev)).start();
             }
-        } catch (InstantiationException | IllegalAccessException ex) {
-            Logger.getLogger(Dispatcher.class.getName()).log(Level.INFO, null, ex);
+        } catch (Exception e) {
+            Logger.getLogger(Dispatcher.class.getName()).log(Level.INFO, null, e);
         }
     }
     
